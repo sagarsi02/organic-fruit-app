@@ -21,6 +21,6 @@ class product(models.Model):
     )
 
 class cart(models.Model):
-    product_id = models.ForeignKey(product, null=True, on_delete=models.CASCADE)
+    product_id = models.CharField(max_length=100, null=False, blank=False)
     user_id = models.CharField(max_length=50)
     product_quentity = models.IntegerField(default=1)
